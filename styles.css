@@ -1,0 +1,140 @@
+body {
+    background-color: rgb(204, 204, 204);   
+   }
+   
+   .Nav {
+    overflow: hidden;
+    background-color: #e7e96d;
+    padding: 20px 10px;
+    height: 150px;
+  }
+  
+  /* Style the header links */
+  .Nav a {
+    position: fixed;
+    right: 100px;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-family: 'Darker Grotesque';
+    font-size: 50px;
+    border-radius: 4px;
+  }
+  
+  .logo {
+    position: fixed;
+    top:70px;
+    left: 100px;
+    font-size: 90px;
+    font-weight: bold;
+    font-family: "Allerta stencil";
+  }
+  
+  /* Change the background color on mouse-over */
+  .Nav a:hover {
+    color:rgb(109, 109, 109);
+  }
+  
+  /* Style the active/current link*/
+  .Nav a.active {
+    color:white;
+  }
+
+  .images {
+    position:fixed;
+    z-index: 6;
+    right:50%;
+  }
+  
+   /* question */
+   .containerQuestion {
+    position:fixed;
+    z-index: 4;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 25%;
+    width: 100%;
+    height: 140px;
+  }
+  
+    .question {
+      background-color: #777777;
+      position:relative;
+      z-index: 5;
+      height: 140px;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      color: rgb(211, 230, 128);
+      font-family: "Allerta stencil";
+      font-size: 50px;
+      text-decoration: none;
+      text-align: center;
+      vertical-align: middle;
+      line-height: normal;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  
+  .containerOptions {
+    background-color: rgb(204, 204, 204);
+      position:fixed;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: initial;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 -5px;
+      width: 80%;
+      height: 35%;
+      right:10%;
+      top:35%;
+      z-index: 1;
+  }
+  /* options */
+  .item {
+      background-color: white;
+      height: 45%;
+      top: 20px;
+      flex:1;
+      padding: 8px;
+      border-radius: 25%;
+      margin: 0 20px;
+      margin-bottom: 20px;
+      box-shadow: 4.0px 4.0px 4.0px 4.0px rgba(76, 76, 125, 0.15);
+      text-align: center;
+      font-family: 'Darker Grotesque';
+      font-size: 50px;
+      line-height: 37px;
+      cursor:pointer;        
+      text-decoration: none;
+      color: rgb(5, 5, 5);
+    }
+    
+    .item:hover {
+        text-decoration: none;
+        color: rgb(5, 5, 5);
+    }
+  
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .bottom {
+    position:fixed;
+    z-index: 3;
+    font-size: 63px;
+    font-weight: lighter;
+    font-family: "Allerta stencil";
+    text-align: right;
+    color: rgb(168, 168, 168);
+    background-color: #696969;
+    top:86%;
+    width: 100%;
+    height: 190px;
+    
+}
