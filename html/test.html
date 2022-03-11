@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=.75">
+<title>Cat Name Generator</title>
+
+<link rel="stylesheet"  href="../css/test.css">        
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Allerta Stencil' >
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Darker Grotesque' >
+
+<script src="../js/script.js" type="module"></script>
+</head>
+
+<body>
+<header>
+<div class="Nav">
+    <a href="index.html">Home</a>
+    <div class="logo">Cat Name Generator</div>
+</div>
+</header>
+
+<div class="containerStart">
+<button submit class="buttonStart"><a href="one.html">START</a></button>
+</div>
+
+<!-----------------NEW SECTION------------------------------>
+<main>
+    <section class="submitSection">
+        <h2 id="formHeading" class="offscreen">Enter your selection here</h2><!--screen reader-->
+        <form id="submitForm" class="submitSection_form">
+            <input
+                type="text"
+                id="submitSection_textInput"
+                class="submitSection_textInput"
+                required
+                maxlength="20"
+                placeholder="Enter selection"
+                aria-labelledby="formHeading">
+            <button class="submitSection_button" aria-label="Submit">
+               <!--<i class="fas fa-check"></i>  checkLogo fontawesome -->
+            </button>
+        </form>
+    </section>
+    <!--<div class="js_section">-->
+    <section id="suggestionSection" class="suggestionSection hidden">
+        <h6>Your Name is</h6>
+        <!---------------------------JS HERE--------@set to alert-->
+        <p>yourname</p>
+    </section>
+    </div>
+</main>
+
+<!-----------------END NEW SECTION------------------------------>
+
+
+<div class ="bottom">
+    Generating cats one name at a time. . . . 
+</div>
+
+
+</body>
+</html>

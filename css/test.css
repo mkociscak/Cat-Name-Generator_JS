@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1.35px;
+  color: #fff;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(204, 204, 204,0.4);
+  /*background-image: url("../catborder.jpg");*/
+  background-size: cover;
+  background-blend-mode: overlay;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.bottom {
+  position:fixed;
+  z-index: 3;
+  font-size: 12px;
+  font-weight: lighter;
+  font-family: "Allerta stencil";
+  text-align: right;
+  align-items: center;
+  color: rgb(211, 230, 128);
+  background-color: #696969;
+  top:90%;
+  width: 100%;
+  height: 10%;
+}
+
+main {
+  border: 1px solid #fff;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  background-color: #696969;
+}
+
+header i {
+  font-size: 5rem;
+}
+
+.logo {
+  position: fixed;
+  top:70px;
+  left: 100px;
+  font-size: 90px;
+  font-weight: bold;
+  font-family: "Allerta stencil";
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+}
+
+main {
+  margin-top: 10px;
+}
+
+section {
+  position: relative;
+}
+
+.submitSection__form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submitSection__form input, 
+.submitSection__form button {
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.submitSection__form input {
+  width: calc(100% - 60px);
+}
+
+.submitSection__form button {
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  background-color: limegreen;
+  color: #fff;
+  letter-spacing: 1.35px;
+  font-weight: bold;
+}
+
+.suggestionSection {
+  padding-top: 20px;
+}
+
+.suggestionSection h2 {
+  padding-bottom: 20px;
+}
+
+.suggestionSection a, 
+.suggestionSection a:hover, 
+.suggestionSection a:focus {
+  color: #fff; 
+  text-decoration: none;
+}
+
+.submitSection_button{
+  width:50px;
+  height:30px;
+}
+
+ol {
+  margin-left: 20px;
+  word-break: break-all;
+  font-size: 1.15rem;
+}
+
+ol > ul {
+  padding-bottom: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+ul > li {
+  margin-top: 10px;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  ol {
+      margin-left: 40px;
+      font-size: 1.5rem;
+  }
+}
+
+/* Style the header links   
+   .Nav {
+    overflow: hidden;
+    background-color: #e7e96d;
+    padding: 20px 10px;
+    height: 150px;
+  }
+  
+   
+  .Nav a {
+    position: fixed;
+    right: 100px;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-family: 'Darker Grotesque';
+    font-size: 50px;
+    border-radius: 4px;
+  }
+  
+  
+  
+  
+  .Nav a:hover {
+    color:rgb(109, 109, 109);
+  }
+  
+  
+  .Nav a.active {
+    color:white;
+  }
+
+  .images {
+    position:fixed;
+    z-index: 6;
+    right:10%;
+    top: 49%;
+  }
+
+  .images2 {
+    position:fixed;
+    z-index: 6;
+    left:19%;
+    top: 47%;
+  }
+  
+  
+   .containerQuestion {
+    position:fixed;
+    z-index: 4;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 22%;
+    width: 100%;
+    height: 150px;
+  }
+    .question {
+      background-color: #777777;
+      position:fixed;
+      padding-top: 5px;
+      z-index: 5;
+      height: 100px;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-family: "Allerta stencil";
+      font-size: 50px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 15px;
+      line-height: 1;
+      font-variation-settings: 'opsz', 50;
+    }
+  
+  .containerOptions {
+    background-color: rgb(204, 204, 204);
+      position:fixed;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: initial;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 -5px;
+      width: 80%;
+      height: 35%;
+      right:10%;
+      top:35%;
+      z-index: 1;
+  }
+  
+  .item {
+      background-color: white;
+      height: 54%; //48//
+      top: 20px;
+      flex:1;
+      padding: 8px;
+      border-radius: 25%;
+      margin: 0 20px;
+      margin-bottom: 20px;
+      box-shadow: 4.0px 4.0px 4.0px 4.0px rgba(76, 76, 125, 0.15);
+      font-family: 'Darker Grotesque';
+      font-size: 50px;
+      line-height: 37px;
+      cursor:pointer;        
+      text-decoration: none;
+      color: rgb(5, 5, 5);
+      align-items: center;
+      text-align:center;
+      text-orientation: sideways;
+    }
+    
+    .item:hover {
+        text-decoration: none;
+        color: rgb(5, 5, 5);
+    }
+  
+
+
+.containerButtons {
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 73%;
+    width: 100%;
+    height: 5%;
+  }
+  .buttonNext {
+      position:fixed;
+      z-index: 3;
+      
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      margin: 0 -5px;
+      font-size: 70px;
+      font-family: "Allerta stencil";
+      color: rgb(211, 230, 128);
+      text-decoration: none;
+      text-align: center;
+      background-color: #777777;
+      border-radius: 15px;
+  }
+  
+  .buttonNext:hover {
+    cursor: pointer;
+    color:white;
+  }   
+
+  .containerStart {
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    width: 100%;
+    height: 150px;
+  }
+  .buttonStart {
+    position:fixed;
+    z-index: 3;
+    height: 100px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin: 0 -5px;
+    font-size: 70px;
+    font-family: "Allerta stencil";
+    color: rgb(211, 230, 128);
+    text-decoration: none;
+    text-align: center;
+    background-color: #777777;
+    border-radius: 15px;
+}
+
+.buttonStart:hover {
+    cursor: pointer;
+    color:white;
+  }   
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .bottom {
+    position:fixed;
+    z-index: 3;
+    font-size: 63px;
+    font-weight: lighter;
+    font-family: "Allerta stencil";
+    text-align: right;
+    align-items: center;
+    color: rgb(168, 168, 168);
+    background-color: #696969;
+    top:90%;
+    width: 100%;
+    height: 10%;
+    
+}
+
+
+*/

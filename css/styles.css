@@ -44,7 +44,15 @@ body {
   .images {
     position:fixed;
     z-index: 6;
-    right:50%;
+    right:10%;
+    top: 49%;
+  }
+
+  .images2 {
+    position:fixed;
+    z-index: 6;
+    left:19%;
+    top: 47%;
   }
   
    /* question */
@@ -54,28 +62,27 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    top: 25%;
+    top: 22%;
     width: 100%;
-    height: 140px;
+    height: 150px;
   }
-  
     .question {
       background-color: #777777;
-      position:relative;
+      position:fixed;
+      padding-top: 5px;
       z-index: 5;
-      height: 140px;
-      width: 60%;
+      height: 100px;
+      width: 50%;
       display: flex;
       justify-content: center;
-      color: rgb(211, 230, 128);
+      color: white;
       font-family: "Allerta stencil";
       font-size: 50px;
       text-decoration: none;
       text-align: center;
-      vertical-align: middle;
-      line-height: normal;
       border-radius: 15px;
-      cursor: pointer;
+      line-height: 1;
+      font-variation-settings: 'opsz', 50;
     }
   
   .containerOptions {
@@ -96,7 +103,7 @@ body {
   /* options */
   .item {
       background-color: white;
-      height: 45%;
+      height: 54%; /*48*/
       top: 20px;
       flex:1;
       padding: 8px;
@@ -104,13 +111,15 @@ body {
       margin: 0 20px;
       margin-bottom: 20px;
       box-shadow: 4.0px 4.0px 4.0px 4.0px rgba(76, 76, 125, 0.15);
-      text-align: center;
       font-family: 'Darker Grotesque';
       font-size: 50px;
       line-height: 37px;
       cursor:pointer;        
       text-decoration: none;
       color: rgb(5, 5, 5);
+      align-items: center;
+      text-align:center;
+      text-orientation: sideways;
     }
     
     .item:hover {
@@ -118,6 +127,70 @@ body {
         color: rgb(5, 5, 5);
     }
   
+
+
+  /* bottom Next button */
+.containerButtons {
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 73%;
+    width: 100%;
+    height: 5%;
+  }
+  .buttonNext {
+      position:fixed;
+      z-index: 3;
+      
+      width: 250px;
+      display: flex;
+      justify-content: center;
+      margin: 0 -5px;
+      font-size: 70px;
+      font-family: "Allerta stencil";
+      color: rgb(211, 230, 128);
+      text-decoration: none;
+      text-align: center;
+      background-color: #777777;
+      border-radius: 15px;
+  }
+  
+  .buttonNext:hover {
+    cursor: pointer;
+    color:white;
+  }   
+
+  .containerStart {
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    width: 100%;
+    height: 150px;
+  }
+  .buttonStart {
+    position:fixed;
+    z-index: 3;
+    height: 100px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin: 0 -5px;
+    font-size: 70px;
+    font-family: "Allerta stencil";
+    color: rgb(211, 230, 128);
+    text-decoration: none;
+    text-align: center;
+    background-color: #777777;
+    border-radius: 15px;
+}
+
+.buttonStart:hover {
+    cursor: pointer;
+    color:white;
+  }   
 
   a:link, a:visited {
     text-decoration: none;
@@ -131,10 +204,11 @@ body {
     font-weight: lighter;
     font-family: "Allerta stencil";
     text-align: right;
+    align-items: center;
     color: rgb(168, 168, 168);
     background-color: #696969;
-    top:86%;
+    top:90%;
     width: 100%;
-    height: 190px;
+    height: 10%;
     
 }
