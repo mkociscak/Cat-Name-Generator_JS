@@ -8,19 +8,19 @@ html {
   font-size: 16px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 1.35px;
-  color: #fff;
+  color: black;
+  background-color: white;
 }
 
 body {
   min-height: 100vh;
-  background-color: rgb(204, 204, 204,0.55);
+  background-color: rgb(204, 204, 204);
   /*background-image: url("../catborder.jpg");*/
   background-size: cover;
   background-blend-mode: overlay;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  padding: 10px;
 }
 
 .wrapper {
@@ -33,36 +33,33 @@ header {
   height: 13vh;
   max-width: 500px;
   width: 100vw;
-  background-color: #696969;
+  background-color: #777777;
 }
 
 .headerContainer {
-  height: 13vh;
+  height: 14vh;
   max-width: 500px;
   width: 100vw;
 }
 
 .logo {
   position: relative;
-  top:20%;
+  top:18%;
   left: 5%;
+  margin-bottom: 3%;
   font-size: 35px;
   font-weight: bold;
   font-family: "Allerta stencil";
+  color: rgb(211, 230, 128);
 }
 
-.headerContainer a {
+.fa-house-chimney{
   position: relative;
   top:10%;
-  left: 82%;
-  font-size: 22px;
-  color: black;
-  text-decoration: none;
-  font-family: 'Darker Grotesque';
-}
-
-.headerContainer a:hover a.active{
-  color:rgb(241, 243, 119);
+  left: 90%;
+  font-size: 28;
+  line-height: 1;
+  color: rgb(204, 204, 204);
 }
 
 .startContainer {
@@ -85,13 +82,13 @@ header {
   font-size: 30px;
   font-family: "Allerta stencil";
   text-decoration: none;
-  color: rgb(211, 230, 128);
+  color: white;
   background-color: #777777;
 }
 
 .startButton:hover {
   cursor: pointer;
-  color:white;
+  color:rgb(211, 230, 128);
 }   
 
 a:link, a:visited {
@@ -112,7 +109,7 @@ a:link, a:visited {
   font-family: "Allerta stencil";
   text-align: right;
   color: rgb(211, 230, 128);
-  background-color: #696969;
+  background-color: #777777;
 }
 
 /* -------------MAIN-------------- */
@@ -126,7 +123,7 @@ main {
   justify-content: center;
   align-items: center;
   overflow: auto;
-  background: pink;
+  background: rgb(204, 204, 204);
   border: 1px solid #fff;
   padding: 20px;
   margin-top: 10px;
