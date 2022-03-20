@@ -69,6 +69,50 @@ router.get('/:characterId', function (req, res, next) {
     });
 });
 
+// Create POST to send ONE [character/]
+router.post('/', function (req, res, next) {
+    characterRepository.insert(req.body, function(data) {
+        res.status(201).json({
+            "status": 201,
+            "request": "postCharacter",
+            "endpoint": "/api/character/",
+            "message": "One character sent.",
+            "data": data
+        });
+    }, function(error) {
+        next(error);
+    });
+})
+
+// Create PUT to update ONE [character/{characterId}]
+router.put('/:characterId', function (req, res, next) {
+    characterRepository.get(req.body, function(data) {
+        if (data) {
+            characterRepository.update(req.body, req.params.characterId, function(data) {
+                res.status(200).json({
+                    "status": 200,
+                    "request": "updateCharacter",
+                    "endpoint": "/api/character/",
+                    "message": "One character updated.",
+                    "data": data
+                });
+            });
+        } else {
+            res.status(404).json({
+                "status": 404,
+                "request": "updateCharacter",
+                "endpoint": "/api/character/{error}",
+                "message": "Character not found.",
+                "data": data
+            });
+        }
+    }, function(error) {
+        next(error);
+    });
+})
+    
+
+
 // Configure router so all routes are prefixed with /api/v1  ---localhost address
 app.use('/api/', router);
 
