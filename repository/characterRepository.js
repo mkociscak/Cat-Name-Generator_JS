@@ -45,8 +45,72 @@ let characterRepository = {
             resolve(characters);
           }
         });
-      }
-    };
+      },
+    
+      //POST
+      insert: function (newData, resolve, reject) {
+        fs.readFile(FILE_NAME, function (error, data) {
+          if (error) {
+            reject(error);
+          } else {
+            let characters = JSON.parse(data);
+            characters.push(newData);
+            fs.writeFile(FILE_NAME, JSON.stringify(characters),function (error) {
+                if (error) {
+                  reject(error);
+                } else { 
+                    resolve(newData);
+                }
+            });
+          }
+        });     
+    },
+
+    //PATCH
+    update: function (newData, characterId, resolve, reject) {
+        fs.readFile(FILE_NAME, function (error, data) {
+          if (error) {
+            reject(error);
+          } else {
+            let characters = JSON.parse(data);
+            let character = characters.find(p => p.characterId == characterId);
+            if (character) {
+                Object.assign(character, newData);
+                fs.writeFile(FILE_NAME, JSON.stringify(characters),function (error) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(newData);
+                    }
+                });
+            }
+          }
+        });    
+    },
+
+    //DELETE
+    delete: function (characterId, resolve, reject) {
+        fs.readFile(FILE_NAME, function (error, data) {
+          if (error) {
+            reject(error);
+          } else {
+            let characters = JSON.parse(data);
+            let index = characters.findIndex(p => p.characterId == characterId);
+            if (index != -1) {
+                characters.splice(index, 1);
+                fs.writeFile(FILE_NAME, JSON.stringify(characters),function (error) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        resolve(index);
+                    }
+                });
+            }
+          }
+        });
+    }
+};
+
 
     
 

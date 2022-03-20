@@ -84,9 +84,9 @@ router.post('/', function (req, res, next) {
     });
 })
 
-// Create PUT to update ONE [character/{characterId}]
-router.put('/:characterId', function (req, res, next) {
-    characterRepository.get(req.body, function(data) {
+// Create PATCH to update ONE [character/{characterId}]
+router.patch('/:characterId', function (req, res, next) {
+    characterRepository.get(req.params.characterId, function(data) {
         if (data) {
             characterRepository.update(req.body, req.params.characterId, function(data) {
                 res.status(200).json({
@@ -109,9 +109,37 @@ router.put('/:characterId', function (req, res, next) {
     }, function(error) {
         next(error);
     });
-})
+});
+
+// DELETE to delete ONE [character/{characterId}]
+router.delete('/:characterId', function (req, res, next) {
+    characterRepository.get(req.params.characterId, function(data) {
+        if (data) {
+            characterRepository.delete(req.params.characterId, function(data) {
+                res.status(200).json({
+                    "status": 200,
+                    "request": "deleteCharacter",
+                    "endpoint": "/api/character/",
+                    "message": "One character deleted.",
+                    "data": data
+                });
+            });
+        } else {
+            res.status(404).json({
+                "status": 404,
+                "request": "deleteCharacter",
+                "endpoint": "/api/character/{error}",
+                "message": "Character not found.",
+                "data": data
+            });
+        }
+    }, function(error) {
+        next(error);
+    });
+});
     
 
+    
 
 // Configure router so all routes are prefixed with /api/v1  ---localhost address
 app.use('/api/', router);
