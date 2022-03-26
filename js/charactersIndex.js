@@ -1,3 +1,5 @@
+//For characters from API not names generated
+
 // Bring in express server from node, imports and create application 
 let express = require('express');
 let app = express();

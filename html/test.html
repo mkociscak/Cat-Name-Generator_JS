@@ -7,11 +7,12 @@
 <title>Cat Name Generator</title>
 
 <link rel="stylesheet"  href="../css/test.css">
+<!--<link rel="stylesheet"  href="../css/styles.css">-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">        
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Allerta Stencil' >
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Darker Grotesque' >
 
-<script src="../js/script.js" type="module"></script>
+<script src="../js/charactersIndex.js" type="module"></script>
 <script src="https://kit.fontawesome.com/b833adae71.js" crossorigin="anonymous"></script>
 </head>
 
@@ -29,28 +30,67 @@
 <button submit class="startButton"><a href="one.html">START</a></button>
 </div>
 
+
+
 <!-----------------NEW SECTION--------------<i class="fa-solid fa-cat"></i>---------------->
+<!-----------------CHOOSE---------------->
 <main>
-    <section class="submitSection">
-        <h2 id="formHeading" class="offscreen">Enter your selection here</h2><!--screen reader-->
-        <form id="submitForm" class="submitSection_form">
+    
+    
+<script src="dropdown.js"></script>
+
+
+<div class="chooseContainer">
+<!-----------------gender------------------------------>
+    <section class="genderSection">
+       <!-- <h2 id="formHeading" class="offscreen">Enter your selection here</h2>screen reader-->
+        <form id="submitGender" class="submitSection_form">
+            
             <input
                 type="text"
                 id="submitSection_textInput"
                 class="submitSection_textInput"
                 required
-                maxlength="20"
-                placeholder="Enter selection"
+                maxlength="30"
+                placeholder="choose gender"
                 aria-labelledby="formHeading">
-            <button class="submitSection_button" aria-label="Submit">
+                <select id ="gender">
+                    <option>male</option>
+                    <option>female</option>
+                </select>
+            <button class="submitGender_button" aria-label="Submit">
                <!--<i class="fas fa-check"></i>  checkLogo fontawesome -->
             </button>
         </form>
     </section>
-    <!--<div class="js_section">-->
+<!-----------------physique------------------------------>
+<section class="physiqueSection">
+    <form id="submitPhysique" class="submitSection_two">
+        <input
+            placeholder="choose physique"
+            aria-labelledby="formHeading">
+            <select id ="physique">
+                <option>slinky</option>
+                <option>thin</option>
+                <option>classic</option>
+                <option>chonky</option>
+                <option>super-chonk</option>
+            </select>
+            
+        <button class="submitPhysique_button" aria-label="Submit">
+        </button>
+    </form>
+</section>
+
+
+</div>
+
+
+<!-----------------CHOOSE---------------->
+<!--<div class="js_section">--------------------------------------------------------->
     <section id="suggestionSection" class="suggestionSection hidden">
         <h6>Your Name is</h6>
-        <!---------------------------JS HERE--------@set to alert-->
+<!---------------------------JS HERE--------@set to alert-->
         <p>yourname</p>
     </section>
     </div>
