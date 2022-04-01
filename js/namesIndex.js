@@ -1,4 +1,17 @@
 
+let submitForm = document.querySelector('#submit');
+
+
+
+submitForm.addEventListener('click', function() {
+    if (document.getElementById("gender").value !== "gender") {
+        let newGender = document.getElementById('item').value
+    } else {
+        alert("please select a gender")
+    }
+})
+
+
 import { namesOne, namesTwo } from "./namesDictionary.js";
 
 const initApp = () => {

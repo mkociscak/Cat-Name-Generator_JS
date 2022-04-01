@@ -13,7 +13,7 @@ My home page displays an html form with four fields. For each field the user can
 <br>
 <br>
 ## Technical requirements:
-The user will need to have 
+To begin in the browser open the file test.html. The user will likely need to first type npm install in the terminal followed by npm run. The user should have a local server running at http://localhost:5000 as the PORT number is set to 5000 in charactersIndex.js. 
 <br>
 <br>
 ## My features are as follows:
@@ -28,8 +28,8 @@ The user will need to have
 <li>Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value.<br> This can be found in the random name generation of the two variables: 1). namesOne 2). namesTwo.
 </li>
 <br>
-<li>Implement a regular expression (regex) to ensure a field either a phone number or an email address is always stored and displayed in the same format.
-<br>This is done simply to verify that each of the four form fields have been checked and that one option is selected. An alert will pop up next to the corresponding section if one value has not been selected.
+<li>Implement a regular expression to ensure a field is always stored and displayed in the same format.
+<br>This is done simply to verify that each of the four form fields have been checked and that one gender option is selected. An alert will pop up next to the corresponding section if one value has not been selected.
 </li>
 </ul>
 <br>
