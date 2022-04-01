@@ -1,16 +1,8 @@
-//For characters from API not names generated
 
-// Bring in express server from node, imports and create application 
 let express = require('express');
 let app = express();
-
 let characterRepository = require('./repository/characterRepository');
-
-
-// Use the express Router object ---for endpoints
 let router = express.Router();
-
-// Configure middleware to support JSON data parsing in request object
 app.use(express.json());
 
 
@@ -140,14 +132,12 @@ router.delete('/:characterId', function (req, res, next) {
         next(error);
     });
 });
-    
+      
 
-    
-
-// Configure router so all routes are prefixed with /api/v1  ---localhost address
+// Configure router so all routes prefixed with /api/v1  ---localhost address
 app.use('/api/', router);
 
 // Create server to listen on port [5000]
-var server = app.listen(65084, function () {
+var server = app.listen(5000, function () {
   console.log('Node server is running on http://localhost:[5000]');
 });

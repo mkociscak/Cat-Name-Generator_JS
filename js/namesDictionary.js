@@ -10,10 +10,9 @@ export const namesOne = {
     8: "Lil ",
     9: "Baby ",
     10: "Kevin ",
-    11: " ",
+    11: "Heya ",
     12: "Bam ",
     13: "Fuzz "
-
 }
 
 export const namesTwo = {
@@ -29,9 +28,5 @@ export const namesTwo = {
     9: "Daisy",
     10: "Furby",
     11: "Pookie",
-    12: "",
-    
-
+    12: "Hula",  
 }
-
-    /* Moonbaby Squeaky KikiPuff Milosevich Otisee */

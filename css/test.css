@@ -15,7 +15,6 @@ html {
 body {
   min-height: 100vh;
   background-color: rgb(204, 204, 204);
-  /*background-image: url("../catborder.jpg");*/
   background-size: cover;
   background-blend-mode: overlay;
   width: 100%;
@@ -140,10 +139,7 @@ main {
 /* ---------HIDDEN --------- */
 .suggestionSection {
   padding-top: 20px;
-}
-
-.suggestionSection h2 {
-  padding-bottom: 20px;
+  top: 70%;
 }
 
 .suggestionSection a, 
@@ -164,7 +160,8 @@ main {
 }
 
 .hidden {
-  display: none;
+  display: flex;
+  
 }
 
 .startContainer {
@@ -202,7 +199,7 @@ a:link, a:visited {
   color: inherit;
 }
 
-/* -------------QUESTION & OPTIONS------------FOR BIG SCREENS */  
+/* ----question & OPTIONS----FOR BIG SCREENS */  
 .containerQuestion {
    position:fixed;
    z-index: 4;
@@ -318,7 +315,7 @@ a:link, a:visited {
   left:19%;
   top: 47%;
 }
-/* -------------QUESTION & OPTIONS------------FOR BIG SCREENS */    
+/* --------MEDIA QUERIES---- */    
 @media only screen and (min-width: 768px) {
   body {
       padding: 20px;

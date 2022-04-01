@@ -7,14 +7,13 @@
 <title>Cat Name Generator</title>
 
 <link rel="stylesheet"  href="../css/test.css">
-<!--<link rel="stylesheet"  href="../css/styles.css">-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">        
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Allerta Stencil' >
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Darker Grotesque' >
 
-<script src="../js/charactersIndex.js" type="module"></script>
-<script src="dropdown.js"></script>
-<script src="https://kit.fontawesome.com/b833adae71.js" crossorigin="anonymous"></script><!---->
+
+<script src="../js/namesIndex.js" type="module"></script>
+<script src="https://kit.fontawesome.com/b833adae71.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,64 +33,58 @@
 
 <!-----------------FORM---------------->
 <main>   
-<div class="formContainer">
+<div class="formContainer" id="form">
     <form action="character.json" method="GET">
 
         <h3>Gender</h3>
         <select name ="gender" id="gender">
             <option disabled hidden selected>Gender</option>
-            <option value="male">male</option>
-            <option value="female">female</option>
+            <option id="male" value="male">male</option>
+            <option id="female" value="female">female</option>
         </select>
         
         <h3>Physique</h3>
         <select name ="physique" id ="physique">
             <option disabled hidden selected>Physique</option>
-            <option value="slinky">slinky</option>
-            <option value="thin">thin</option>
-            <option value="classic">classic</option>
-            <option value="chonky">chonky</option>
-            <option value="super-chonk">super-chonk</option>
+            <option id="slinky" value="slinky">slinky</option>
+            <option id="thin" value="thin">thin</option>
+            <option id="classic" value="classic">classic</option>
+            <option id="chonky" value="chonky">chonky</option>
+            <option id="super-chonk" value="super-chonk">super-chonk</option>
         </select>
 
         <h3>Personality</h3>
         <select name ="personality" id ="personality">
             <option disabled hidden selected>Personality</option>
-            <option value="demonic">demonic</option>
-            <option value="aloof">aloof</option>
-            <option value="chill">chill</option>
-            <option value="playful">playful</option>
-            <option value="energetic">energetic</option>
+            <option id="demonic" value="demonic">demonic</option>
+            <option id="aloof" value="aloof">aloof</option>
+            <option id="chill" value="chill">chill</option>
+            <option id="playful" value="playful">playful</option>
+            <option id="energetic" value="energetic">energetic</option>
         </select>
 
-        <h3>Sounds like</h3>
+        <h3>Vocal</h3>
         <select name ="vocal" id ="vocal">
             <option disabled hidden selected>Vocal</option>
-            <option value="raccoon">raccoon</option>
-            <option value="bird">bird</option>
-            <option value="wolf">wolf</option>
-            <option value="sheep">sheep</option>
-            <option value="antelope">antelope</option>
+            <option id="raccoon" value="raccoon">raccoon</option>
+            <option id="bird" value="bird">bird</option>
+            <option id="wolf" value="wolf">wolf</option>
+            <option id="sheep" value="sheep">sheep</option>
+            <option id="antelope" value="antelope">antelope</option>
         </select>
 
-    <div><button type="submit" id="submit">Submit</button></div>
+    <div>
+        <button type="submit" id="submit" value="save" >Submit</button>
+    </div>
     </form>
 </div>
 </main>
 <!-----------------FORM end---------------->
 
 
-<!--<div class="js_section">--------------------------------------->
     <section id="suggestionSection" class="suggestionSection hidden">
-        <h6>Your Name is</h6>
-<!---------------------------JS HERE--------@set to alert-->
-        <p>yourname</p>
     </section>
     </div>
-<!-----------------END NEW SECTION------------------------------>
-
-
-
 
 <div class ="footer">
     Generating cats one name at a time. . .  

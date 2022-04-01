@@ -1,8 +1,8 @@
 
-import { namesOne, namesTwo } from "./names.js";
+import { namesOne, namesTwo } from "./namesDictionary.js";
 
 const initApp = () => {
-    document.getElementById("submitForm").addEventListener("submit", (event) => {
+    document.getElementById("form").addEventListener("submit", (event) => {
         event.preventDefault();
         //clearNames
         clearName();
@@ -11,7 +11,6 @@ const initApp = () => {
         console.log(namesArray);
         //displayNames
         displayName(namesArray);
-        
     });
 }
 
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", initApp);
 const clearName = () => {
     const display = document.getElementById("suggestionSection");
     if (!display.classList.contains("hidden")) display.classList.toggle("hidden");
-    const list = document.querySelector('.suggestionSection ol');
+    const list = document.querySelector('.suggestionSection');
     //list.innerHTML = "";
 }
 
@@ -41,7 +40,7 @@ const generateName = () => {
 //displayNames
 const displayName = (namesArray) => {
     const list = document.querySelector('.suggestionSection');
-    const rawFirstName = document.getElementById("submitSection_textInput").value;
+    const rawFirstName = document.getElementById("vocal").value;
     const firstName = sanitizeInput(rawFirstName);
     namesArray.forEach(name => {
         alert(`${name}`) //turn into better display type
@@ -55,7 +54,3 @@ const sanitizeInput = (inputValue) => {
     div.textContent = inputValue;
     return div.innerHTML; //turn into toString method
 }
-
-
-
-
