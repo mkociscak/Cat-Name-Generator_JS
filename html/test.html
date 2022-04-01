@@ -13,7 +13,8 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Darker Grotesque' >
 
 <script src="../js/charactersIndex.js" type="module"></script>
-<script src="https://kit.fontawesome.com/b833adae71.js" crossorigin="anonymous"></script>
+<script src="dropdown.js"></script>
+<script src="https://kit.fontawesome.com/b833adae71.js" crossorigin="anonymous"></script><!---->
 </head>
 
 <body>
@@ -32,71 +33,48 @@
 
 
 
-<!-----------------NEW SECTION--------------<i class="fa-solid fa-cat"></i>---------------->
-<!-----------------CHOOSE---------------->
-<main>
-    
-    
-<script src="dropdown.js"></script>
-
-
-<div class="chooseContainer">
+<!-------NEW SECTION---<i class="fa-solid fa-cat"></i>-------------->
+<!-----------------FORM---------------->
+<main>   
+<div class="formContainer">
+    <form>
 <!-----------------gender------------------------------>
-    <section class="genderSection">
-       <!-- <h2 id="formHeading" class="offscreen">Enter your selection here</h2>screen reader-->
-        <form id="submitGender" class="submitSection_form">
-            
-            <input
-                type="text"
-                id="submitSection_textInput"
-                class="submitSection_textInput"
-                required
-                maxlength="30"
-                placeholder="choose gender"
-                aria-labelledby="formHeading">
-                <select id ="gender">
-                    <option>male</option>
-                    <option>female</option>
-                </select>
-            <button class="submitGender_button" aria-label="Submit">
-               <!--<i class="fas fa-check"></i>  checkLogo fontawesome -->
-            </button>
-        </form>
-    </section>
+        <h3>Gender</h3>
+        <select id ="gender">
+            <option disabled hidden selected>Gender</option>
+            <option value="male">male  </option>
+            <option value="female">female</option>
+        </select>
+        
 <!-----------------physique------------------------------>
-<section class="physiqueSection">
-    <form id="submitPhysique" class="submitSection_two">
-        <input
-            placeholder="choose physique"
-            aria-labelledby="formHeading">
-            <select id ="physique">
-                <option>slinky</option>
-                <option>thin</option>
-                <option>classic</option>
-                <option>chonky</option>
-                <option>super-chonk</option>
-            </select>
-            
-        <button class="submitPhysique_button" aria-label="Submit">
-        </button>
+        <h3>Physique</h3>
+        <select id ="physique">
+            <option disabled hidden selected>Physique</option>
+            <option value="slinky">slinky</option>
+            <option>thin</option>
+            <option>classic</option>
+            <option>chonky</option>
+            <option>super-chonk</option>
+        </select>
+
+
+
     </form>
-</section>
-
-
 </div>
-
-
+</main>
 <!-----------------CHOOSE---------------->
-<!--<div class="js_section">--------------------------------------------------------->
+
+
+<!--<div class="js_section">--------------------------------------->
     <section id="suggestionSection" class="suggestionSection hidden">
         <h6>Your Name is</h6>
 <!---------------------------JS HERE--------@set to alert-->
         <p>yourname</p>
     </section>
     </div>
-</main>
-
 <!-----------------END NEW SECTION------------------------------>
+
+
 
 
 <div class ="footer">
