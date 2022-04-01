@@ -62,40 +62,6 @@ header {
   color: rgb(204, 204, 204);
 }
 
-.startContainer {
-  position:fixed;
-  display: flex;
-  top: 73%;
-  max-width: 500px;
-  width: 100vw;
-  height: 8vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.startButton {
-  position:relative;
-  height: 100%;
-  width: 30%;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 30px;
-  font-family: "Allerta stencil";
-  text-decoration: none;
-  color: white;
-  background-color: #777777;
-}
-
-.startButton:hover {
-  cursor: pointer;
-  color:rgb(211, 230, 128);
-}   
-
-a:link, a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
 .footer {
   position:fixed;
   height: 9vh;
@@ -113,21 +79,20 @@ a:link, a:visited {
 }
 
 /* -------------MAIN-------------- */
-/*---------altered Mar 20----------------*/
 main {
   position: fixed;
   display: flex;
-  top: 35%;
+  top: 33%;
   max-width: 500px;
   width: 100vw;
-  height: 30vh;
+  height: 35vh;
   justify-content: center;
   align-items: center;
-  overflow: auto;
   background: rgb(204, 204, 204);
   border: 1px solid #fff;
   padding: 20px;
-  margin-top: 10px;
+  
+  
 }
 .formContainer {
   width: 100%;
@@ -140,74 +105,36 @@ main {
   color:#777777;
 }
 
-.submitGender_button {
-  width: 20px;
-  height: 13px;
-  
-}
-
-.submitPhysique_button {
-  width: 20px;
-  height: 13px;
-  
-}
-
-#physique, #gender {
+#physique, #gender, #personality, #vocal {
   padding: 7px;
+  margin-bottom: 10px;
 }
 
 #submitPhysique {
   padding: 7px;
 }
 
-
-
-
-
-
-/*
-.submitSection_form {
-  width: 100%;
-  
+#submit {
+  position:fixed;
+  z-index: 3;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Allerta stencil";
+  color: rgb(211, 230, 128);
+  text-decoration: none;
+  text-align: center;
+  background-color: #777777;
+  border-radius: 15px;
+  margin-top: 20px;
 }
-
-
-.genderSection {
-  width: 200px;
-  height: 150px;
-}
-
-
-*/
-
-
-/*
-section {
-  position: relative;
-}
-
-.submitSection__form input, 
-.submitSection__form button {
-  font-size: 1.25rem;
-  padding: 10px;
-  border-radius: 10px;
-  outline: none;
-}
-
-.submitSection__form input {
-  width: calc(100% - 60px);
-}
-
-.submitSection__form button {
-  min-width: 48px;
-  min-height: 48px;
+ 
+.submit:hover {
   cursor: pointer;
-  background-color: limegreen;
-  color: #fff;
-  letter-spacing: 1.35px;
-  font-weight: bold;
-}
-
+  color:white;
+}   
 
 
 /* ---------HIDDEN --------- */
@@ -238,6 +165,41 @@ section {
 
 .hidden {
   display: none;
+}
+
+.startContainer {
+  position:fixed;
+  display: flex;
+  top: 73%;
+  max-width: 500px;
+  width: 100vw;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.startButton {
+  display: none;
+  position:relative;
+  height: 100%;
+  width: 30%;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Allerta stencil";
+  text-decoration: none;
+  color: white;
+  background-color: #777777;
+}
+
+.startButton:hover {
+  cursor: pointer;
+  color:rgb(211, 230, 128);
+}   
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* -------------QUESTION & OPTIONS------------FOR BIG SCREENS */  
@@ -327,7 +289,7 @@ section {
    position:fixed;
    z-index: 3;
    width: 250px;
-   display: flex;
+   display: none; /*flex;*/
    justify-content: center;
    margin: 0 -5px;
    font-size: 70px;

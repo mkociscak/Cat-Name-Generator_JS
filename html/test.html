@@ -32,37 +32,53 @@
 </div>
 
 
-
-<!-------NEW SECTION---<i class="fa-solid fa-cat"></i>-------------->
 <!-----------------FORM---------------->
 <main>   
 <div class="formContainer">
-    <form>
-<!-----------------gender------------------------------>
+    <form action="character.json" method="GET">
+
         <h3>Gender</h3>
-        <select id ="gender">
+        <select name ="gender" id="gender">
             <option disabled hidden selected>Gender</option>
-            <option value="male">male  </option>
+            <option value="male">male</option>
             <option value="female">female</option>
         </select>
         
-<!-----------------physique------------------------------>
         <h3>Physique</h3>
-        <select id ="physique">
+        <select name ="physique" id ="physique">
             <option disabled hidden selected>Physique</option>
             <option value="slinky">slinky</option>
-            <option>thin</option>
-            <option>classic</option>
-            <option>chonky</option>
-            <option>super-chonk</option>
+            <option value="thin">thin</option>
+            <option value="classic">classic</option>
+            <option value="chonky">chonky</option>
+            <option value="super-chonk">super-chonk</option>
         </select>
 
+        <h3>Personality</h3>
+        <select name ="personality" id ="personality">
+            <option disabled hidden selected>Personality</option>
+            <option value="demonic">demonic</option>
+            <option value="aloof">aloof</option>
+            <option value="chill">chill</option>
+            <option value="playful">playful</option>
+            <option value="energetic">energetic</option>
+        </select>
 
+        <h3>Sounds like</h3>
+        <select name ="vocal" id ="vocal">
+            <option disabled hidden selected>Vocal</option>
+            <option value="raccoon">raccoon</option>
+            <option value="bird">bird</option>
+            <option value="wolf">wolf</option>
+            <option value="sheep">sheep</option>
+            <option value="antelope">antelope</option>
+        </select>
 
+    <div><button type="submit" id="submit">Submit</button></div>
     </form>
 </div>
 </main>
-<!-----------------CHOOSE---------------->
+<!-----------------FORM end---------------->
 
 
 <!--<div class="js_section">--------------------------------------->
