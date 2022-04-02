@@ -13,7 +13,7 @@ My home page displays an html form with four fields. For each field the user can
 <br>
 <br>
 ## Technical requirements:
-To begin in the browser open the file test.html. The user will likely need to first type npm install in the terminal followed by npm run. The user should have a local server running at http://localhost:5000 as the PORT number is set to 5000 in charactersIndex.js. 
+To begin in the browser open the file test.html. Some features will work using only the browser. For others the user will need to first type npm install in the terminal followed by npm run. The user should have a local server running at http://localhost:5000 as the PORT number is set to 5000 in charactersIndex.js. 
 <br>
 <br>
 ## My features are as follows:
@@ -29,7 +29,7 @@ To begin in the browser open the file test.html. The user will likely need to fi
 </li>
 <br>
 <li>Implement a regular expression to ensure a field is always stored and displayed in the same format.
-<br>This is done simply to verify that each of the four form fields have been checked and that one gender option is selected. An alert will pop up next to the corresponding section if one value has not been selected.
+<br>This is done simply to verify that the gender form field has been checked and that one gender option is selected. An alert will pop up next to the corresponding section if one value has not been selected.
 </li>
 </ul>
 <br>

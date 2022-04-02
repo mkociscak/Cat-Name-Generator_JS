@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -17,7 +16,6 @@ body {
   background-color: rgb(204, 204, 204);
   background-size: cover;
   background-blend-mode: overlay;
-  width: 100%;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -26,6 +24,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: rgb(204, 204, 204);
 }
 
 header {
@@ -57,7 +56,6 @@ header {
   top:10%;
   left: 90%;
   font-size: 28;
-  line-height: 1;
   color: rgb(204, 204, 204);
 }
 
@@ -81,16 +79,15 @@ header {
 main {
   position: fixed;
   display: flex;
-  top: 33%;
+  top: 26%;
   max-width: 500px;
   width: 100vw;
-  height: 35vh;
+  height: 37vh;
   justify-content: center;
   align-items: center;
   background: rgb(204, 204, 204);
   border: 1px solid #fff;
   padding: 20px;
-  
   
 }
 .formContainer {
@@ -161,7 +158,6 @@ main {
 
 .hidden {
   display: flex;
-  
 }
 
 .startContainer {
@@ -176,7 +172,6 @@ main {
 }
 
 .startButton {
-  display: none;
   position:relative;
   height: 100%;
   width: 30%;
@@ -315,9 +310,106 @@ a:link, a:visited {
   left:19%;
   top: 47%;
 }
-/* --------MEDIA QUERIES---- */    
+
+/* --------MEDIA QUERIES------------------ */    
 @media only screen and (min-width: 768px) {
+  
   body {
-      padding: 20px;
+    min-height: 100vh;
+    width: 100%;
+    min-width: 768px;
   }
+  
+  .footer {
+    min-width: 768px;
+    width: 100vw;
+  }
+
+  .formContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    min-width: 768px;
+    width: 100vw;
+  }
+  
+  .headerContainer {
+    height: 14vh;
+    min-width: 768px;
+    width: 100vw;
+  }
+  
+  .logo {
+    top:18%;
+    left: 10%;
+  }
+
+  main {
+    min-width: 768px;
+    width: 100vw;
+  }
+
+  .startContainer {
+    min-width: 768px;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1281px) {
+  body {
+    min-height: 100vh;
+    width: 100%;
+    min-width: 1282px;
+  }
+
+  .footer {
+    min-width: 1282px;
+    width: 100vw;
+  }
+
+  .formContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  header {
+    min-width: 1282px;
+    width: 100vw;
+  }
+  
+  .headerContainer {
+    height: 14vh;
+    min-width: 1281px;
+    width: 100vw;
+  }
+  
+  .logo {
+    top:18%;
+    left: 10%;
+  }
+
+  main {
+    min-width: 1282px;
+    width: 100vw;
+  }
+
+  .startContainer {
+    min-width: 1282px;
+  }
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
 }

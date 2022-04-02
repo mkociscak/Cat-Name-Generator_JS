@@ -24,4 +24,4 @@ let once = {
 };
 
 const submitEvent = document.querySelector('#submit');
-submitEvent.addEventListener('click', genderValue); 
+submitEvent.addEventListener('click', genderValue, once); 
