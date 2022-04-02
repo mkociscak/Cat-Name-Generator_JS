@@ -12,8 +12,6 @@ const genderValue = () => {
     
     if (checkGender === "true") {
         console.log(checkGender)
-    //} else if (genderInput === "male" || "female"){
-       // alert("cool")
     } else {
         alert("choose a gender")
     }
