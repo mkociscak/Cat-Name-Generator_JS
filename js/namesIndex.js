@@ -1,33 +1,20 @@
 
-let submitForm = document.querySelector('#submit');
-
-
-
-submitForm.addEventListener('click', function() {
-    if (document.getElementById("gender").value !== "gender") {
-        let newGender = document.getElementById('item').value
-    } else {
-        alert("please select a gender")
-    }
-})
-
-
 import { namesOne, namesTwo } from "./namesDictionary.js";
 
 const initApp = () => {
-    document.getElementById("form").addEventListener("submit", (event) => {
+    document.getElementById("startButton").addEventListener("click", (event) => {
         event.preventDefault();
         //clearNames
         clearName();
         //generateNames
         const namesArray = generateName();
-        console.log(namesArray);
         //displayNames
         displayName(namesArray);
     });
 }
 
 document.addEventListener("DOMContentLoaded", initApp);
+
 
 //clearNames
 const clearName = () => {
@@ -52,9 +39,6 @@ const generateName = () => {
 
 //displayNames
 const displayName = (namesArray) => {
-    const list = document.querySelector('.suggestionSection');
-    const rawFirstName = document.getElementById("vocal").value;
-    const firstName = sanitizeInput(rawFirstName);
     namesArray.forEach(name => {
         alert(`${name}`) //turn into better display type
     });

@@ -2,13 +2,15 @@
 let express = require('express');
 let app = express();
 let characterRepository = require('./repository/characterRepository');
+
 let router = express.Router();
+
 app.use(express.json());
 
 
 // Create GET to return ALL [character/getAll]
 router.get('/', function (req, res, next) {
-    characterRepository.getAll(function(data) {
+    getAll(function(data) {
             res.status(200).json({
                 "status": 200,
                 "request": "getAllCharacters",
@@ -27,7 +29,7 @@ router.get('/search', function (req, res, next) {
         "characterId": req.query.characterId,
         "vocal": req.query.vocal
     };
-    characterRepository.search(searchObject, function (data) {
+    search(searchObject, function (data) {
         res.status(200).json({
             "status": 200,
             "request": "get",
@@ -42,7 +44,7 @@ router.get('/search', function (req, res, next) {
 
 // Create GET to return ONE [character/{characterId}]
 router.get('/:characterId', function (req, res, next) {
-    characterRepository.get(req.params.characterId, function(data) {
+    get(req.params.characterId, function(data) {
         if (data) {
             res.status(200).json({
                 "status": 200,
@@ -66,7 +68,7 @@ router.get('/:characterId', function (req, res, next) {
 
 // Create POST to send ONE [character/]
 router.post('/', function (req, res, next) {
-    characterRepository.insert(req.body, function(data) {
+    insert(req.body, function(data) {
         res.status(201).json({
             "status": 201,
             "request": "postCharacter",
@@ -81,9 +83,9 @@ router.post('/', function (req, res, next) {
 
 // Create PATCH to update ONE [character/{characterId}]
 router.patch('/:characterId', function (req, res, next) {
-    characterRepository.get(req.params.characterId, function(data) {
+    get(req.params.characterId, function(data) {
         if (data) {
-            characterRepository.update(req.body, req.params.characterId, function(data) {
+            update(req.body, req.params.characterId, function(data) {
                 res.status(200).json({
                     "status": 200,
                     "request": "updateCharacter",
@@ -108,9 +110,9 @@ router.patch('/:characterId', function (req, res, next) {
 
 // DELETE to delete ONE [character/{characterId}]
 router.delete('/:characterId', function (req, res, next) {
-    characterRepository.get(req.params.characterId, function(data) {
+    get(req.params.characterId, function(data) {
         if (data) {
-            characterRepository.delete(req.params.characterId, function(data) {
+            delete(req.params.characterId, function(data) {
                 res.status(200).json({
                     "status": 200,
                     "request": "deleteCharacter",
@@ -141,3 +143,4 @@ app.use('/api/', router);
 var server = app.listen(5000, function () {
   console.log('Node server is running on http://localhost:[5000]');
 });
+
