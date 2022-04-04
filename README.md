@@ -4,7 +4,9 @@ This is my third project with Code Louisville.
 
 This app can help you find the purrfect name for your cat friend. Using JavaScript, HTML, CSS, ExpressJS and Node, this application works to generate fantastical names specifically formulated to fit your fur ball buddies.
 
-My home page displays an html form with four fields. For each field the user can choose from the corresponding dropdown box to select a characteristic. After selecting one option for each of the fields, the user can click the submit button and a random name will appear as an alert. 
+My home page displays an html form with four fields. For each field the user can choose from the corresponding dropdown box to select a characteristic. After selecting one option for each of the fields, the user can click the submit button and the values will save (through the browser/local storage) to the file characterResults.html which will automatically appear.
+
+Below the submit button is a larger button that reads "Get Name". Clicking this button will generate a random two-part name that will appear as an alert. 
 <br>
 &nbsp;&nbsp;
 &nbsp;&nbsp;
@@ -13,23 +15,29 @@ My home page displays an html form with four fields. For each field the user can
 <br>
 <br>
 ## Technical requirements:
-To begin in the browser open the file test.html. Some features will work using only the browser. For others the user will need to first type npm install in the terminal followed by npm run. The user should have a local server running at http://localhost:5000 as the PORT number is set to 5000 in charactersIndex.js. 
+To begin in the browser open the file test.html. The first three features will work using only the browser. 
+
+For the other features the user will need to first type npm install in the terminal followed by npm run. The user should have a local server running at http://localhost:5000 as the PORT number is set to 5000 in charactersIndex.js. 
+
+The page layout is also responsive for three different screen sizes (phone, tablet and computer/monitor).
 <br>
 <br>
 ## My features are as follows:
 <ul>
-<li>Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application.<br> I created two dictionaries to generate two-part cat names at random. This can be seen in the code in namesDictionary.js, namesIndex.js and index.html.<br></li>
+<li>Create an array, dictionary or list, populate it with multiple values, retrieve at least one value, and use or display it in your application.<br> I created two dictionaries to generate two-part cat names at random. The random name appears as an alert when the Get Name button is clicked. This can be found in the code in namesDictionary.js and namesIndex.js.<br></li>
 <br>
 <li>Create and use a function that accepts two or more values (parameters), calculates or determines a new value based on those inputs, and returns a new value.<br> This can be found in the random name generation of the two variables: 1). namesOne 2). namesTwo.
 </li>
 <br>
-<li>Create a web server with at least one route and connect to it from your application using ExpressJS.<br> This is set to run on PORT 5000 at  http://localhost:5000. This code can be found in charactersIndex.js and characterRepository.js. The generated characters (combinations of the four characteristics) are saved into the file characters.json when implemented. 
+<li>Create a form and save the values (on click of Submit button) to an external file. <br> The character input values are saved to the file characterResults.html when the submit button is clicked. This page will show automatically on click of the submit button. </li>
+<br>
+<li>Create a web server with at least one route and connect to it from your application using ExpressJS.<br> This is set to run on PORT 5000 at  http://localhost:5000. This code can be found in charactersIndex.js and characterRepository.js. 
+
+The generated characters (combinations of the four characteristics) are saved in JSON format to the file assets/characters.json when implemented. This is set to run currently through Postman.
 </li>
 <br>
-<li>Create a form and save the values (on click of Submit button) to an external file. <br> The generated character objects are saved in JSON format to the file assets/characters.json when implemented. This is set to run currently through Postman also through http://localhost:5000.</li>
-<br>
 <li>Implement a regular expression to ensure a field is always stored and displayed in the same format.
-<br>This is done simply to verify that the gender form field has been marked and that one gender option is selected. An alert will pop up next to the corresponding section if one value has not been selected.
+<br>This is done simply to verify that the gender form field has been marked and that one gender option is selected. An alert will pop up next to the corresponding section if one value has not been selected. (currently shows true or false in console, alert not functioning properly)
 </li>
 </ul>
 <br>

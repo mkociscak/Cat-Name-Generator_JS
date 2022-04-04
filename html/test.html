@@ -11,18 +11,16 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Allerta Stencil' >
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Darker Grotesque' >
 
-<script src="../js/regex.js" type="module"></script>
 <script src="../js/namesIndex.js" type="module"></script>
 <script src="../js/charactersIndex.js" type="module"></script>
 <script src="https://kit.fontawesome.com/b833adae71.js" crossorigin="anonymous"></script>
 </head>
 
-
 <body>
 <div class="wrapper">    
 <header>
     <div class="headerContainer">
-        <a href="index.html"><i class="fa-solid fa-house-chimney fa-2x" aria-label="Home"></i></a>
+        <a href="test.html"><i class="fa-solid fa-house-chimney fa-2x" aria-label="Home"></i></a>
         
         <div class="logo">Cat Name Generator</div>
     </div>
@@ -30,18 +28,20 @@
 
 
 <main>   
-<div class="formContainer" id="form">
+<div class="formContainer">
+
+ <form action="characterResults.html" id="form">
 
         <h3>Gender</h3>
-        <select name ="gender" id="gender" >
-            <option disabled hidden selected value="gender">gender</option>
+        <select name ="gender" id="gender" onchange="getSelectGender();">
+            <option disabled hidden selected>select gender</option>
             <option value="male">male</option>
             <option value="female">female</option>
         </select>
         
         <h3>Physique</h3>
-        <select name ="physique" id ="physique">
-            <option disabled hidden selected>physique</option>
+        <select name ="physique" id ="physique" onchange="getSelectPhysique();">
+            <option disabled hidden selected>select physique</option>
             <option id="slinky" value="slinky">slinky</option>
             <option id="thin" value="thin">thin</option>
             <option id="classic" value="classic">classic</option>
@@ -50,8 +50,8 @@
         </select>
 
         <h3>Personality</h3>
-        <select name ="personality" id ="personality">
-            <option disabled hidden selected>personality</option>
+        <select name ="personality" id ="personality" onchange="getSelectPersonality();">
+            <option disabled hidden selected>select personality</option>
             <option id="demonic" value="demonic">demonic</option>
             <option id="aloof" value="aloof">aloof</option>
             <option id="chill" value="chill">chill</option>
@@ -60,8 +60,8 @@
         </select>
 
         <h3>Vocal</h3>
-        <select name ="vocal" id ="vocal">
-            <option disabled hidden selected>vocal</option>
+        <select name ="vocal" id ="vocal" onchange="getSelectVocal();">
+            <option disabled hidden selected>select vocal</option>
             <option id="raccoon" value="raccoon">raccoon</option>
             <option id="bird" value="bird">bird</option>
             <option id="wolf" value="wolf">wolf</option>
@@ -69,7 +69,7 @@
             <option id="antelope" value="antelope">antelope</option>
         </select>
         <div>
-        <button type="submit" id="submit" value="submit">Submit</button>
+        <button type="submit" id="submit" value="submit" onclick="passval()">Submit</button>
         </div>
     </form>
 </div>
@@ -88,5 +88,34 @@
 </div>
 </div>
 
+<script>
+
+    function getSelectGender() {
+        var selectGender = document.getElementById("gender").value;
+        localStorage.setItem("gender", selectGender);
+    }
+    
+    function getSelectPhysique() {
+        var selectPhysique = document.getElementById("physique").value;
+        localStorage.setItem("physique", selectPhysique);
+    }
+    
+    function getSelectPersonality() {
+        var selectPersonality = document.getElementById("personality").value;
+        localStorage.setItem("personality", selectPersonality);
+    }
+    
+    function getSelectVocal() {
+        var selectVocal = document.getElementById("vocal").value;
+        localStorage.setItem("vocal", selectVocal);
+    }
+
+    let selectGender = document.getElementById("gender").value;
+    const reGender = /(male)/g;
+    const checkGender = reGender.test(selectGender);
+    console.log(checkGender);
+
+
+ </script> 
 </body>
 </html>

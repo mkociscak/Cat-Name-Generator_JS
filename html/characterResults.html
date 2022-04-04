@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Process</title>
+    </head>
+    <body>
+        The selected gender is : <span id="resultGender"></span><br>
+        The selected physique is : <span id="resultPhysique"></span><br>
+        The selected personality is : <span id="resultPersonality"></span><br>
+        The selected vocal is : <span id="resultVocal"></span>
+
+        <script>
+            document.getElementById("resultGender").innerHTML=localStorage.getItem("gender");
+
+            document.getElementById("resultPhysique").innerHTML=localStorage.getItem("physique");
+
+            document.getElementById("resultPersonality").innerHTML=localStorage.getItem("personality");
+
+            document.getElementById("resultVocal").innerHTML=localStorage.getItem("vocal");
+        </script>
+
+    </body>
+</html>
